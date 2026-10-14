@@ -19,7 +19,7 @@ The activity trail uses a timeline rather than a generic chat box. Each event be
 
 ## Ticket and cash behavior
 
-Each ticket card shows its ID, requester, subject, and open/resolved state. Selecting a card changes the detailed workspace without losing the queue. Starting a run disables the button, shows a working spinner, and polls the backend audit feed so the operator can see activity arrive. When the run completes, that ticket is marked resolved in the desk session and the completed trail remains visible for review.
+Each ticket card shows its ID, requester, subject, and open/resolved state. Selecting a card changes the detailed workspace without losing the queue. Starting a run disables the button, shows a working spinner, and polls the backend audit feed so the operator can see activity arrive. When the backend returns a genuinely completed result, that ticket is marked resolved in the desk session. If the result is `needs_human` or `blocked`, the ticket remains visibly open and the notice explains that review is required; the dashboard never turns an unresolved agent recommendation into a false resolution.
 
 Cash is deliberately prominent but visually separate from the ticket queue. The checking balance is shown in a gold-toned metric, and every approval lives in the parchment Human Gate card. The form requires a payment type, amount, reference when applicable, and approver name; the backend remains the final guard against insufficient funds. This separation makes “an agent recommended it” visibly different from “a human released the money.”
 

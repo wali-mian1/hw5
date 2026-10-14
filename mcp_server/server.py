@@ -1,4 +1,4 @@
-"""Read-only MCP tools for the Campus Customs shop database."""
+"""MCP tools for authoritative Campus Customs facts and guarded actions."""
 
 import sqlite3
 import shutil

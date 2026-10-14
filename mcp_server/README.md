@@ -1,6 +1,6 @@
 # Campus Customs MCP Server
 
-This FastMCP server provides the read-only database tools used by the Campus Customs multi-agent team. It reads the working database at `data/campus_customs_new.db`. The original `data/campus_customs.db` is never used for live work and remains available as a reset source.
+This FastMCP server provides the authoritative database tools used by the Campus Customs multi-agent team. Fact queries are read-only; the explicitly guarded approval and reset tools are the only mutation/reset paths. It reads the working database at `data/campus_customs_new.db`. The original `data/campus_customs.db` is never used for live work and remains available as a reset source.
 
 The server is intentionally not connected or run as part of Problem 3. Later problems will connect agents to these tools and add more tools as needed.
 

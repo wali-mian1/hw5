@@ -77,8 +77,14 @@ function App() {
     try {
       const response = await fetch(`${API_URL}/tickets/${selectedTicket.id}/run`, { method: "POST" });
       if (!response.ok) throw new Error("The agent run could not be started");
-      setResolved((current) => new Set(current).add(selectedTicket.id));
-      setNotice(`Ticket ${selectedTicket.id} resolved — review the trail below.`);
+      const data = await response.json();
+      const resultStatus = data.result?.status;
+      if (resultStatus === "completed" || data.ticket?.status === "resolved") {
+        setResolved((current) => new Set(current).add(selectedTicket.id));
+        setNotice(`Ticket ${selectedTicket.id} resolved — review the trail below.`);
+      } else {
+        setNotice(`Ticket ${selectedTicket.id} needs human review and remains open — review the trail below.`);
+      }
       await loadDashboard();
     } catch (requestError) {
       setError(requestError instanceof Error ? requestError.message : "Agent run failed");
