@@ -1584,5 +1584,19 @@
         "No discount, purchase, or external communication has been authorized."
       ]
     }
+  },
+  {
+    "timestamp": "2026-10-14T13:21:27.206960+00:00",
+    "event": "mcp_tool_call",
+    "tool": "list_tickets",
+    "arguments": {}
+  },
+  {
+    "timestamp": "2026-10-14T13:21:27.544913+00:00",
+    "event": "mcp_tool_call",
+    "tool": "get_cash_balance",
+    "arguments": {
+      "account": "checking"
+    }
   }
 ]
