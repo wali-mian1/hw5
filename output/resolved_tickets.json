@@ -1,0 +1,34 @@
+{
+  "run_type": "full_three_ticket_agent_run",
+  "database": "data/campus_customs_new.db",
+  "starting_checking_balance": 3400.0,
+  "ending_checking_balance": 3400.0,
+  "cash_change_total": 0.0,
+  "note": "The run was intentionally stopped at human-review gates. No approvals or fabricated resolutions were recorded.",
+  "tickets": [
+    {
+      "id": 101,
+      "final_status": "needs_human",
+      "outcome": "CC-TEE-WHITE size S had zero stock. Linked invoice 501 was open and past due, so replenishment and customer fulfillment could not be safely promised.",
+      "agents": ["Boss", "Inventory", "Accounting", "Customer Service"],
+      "human_approvals": [],
+      "cash_change": 0.0
+    },
+    {
+      "id": 102,
+      "final_status": "needs_human",
+      "outcome": "Lease 1 confirmed $2,400 rent due 2026-09-02. Payment status and human approval were unavailable, so no payment or landlord communication occurred.",
+      "agents": ["Boss", "Facilities", "Accounting"],
+      "human_approvals": [],
+      "cash_change": 0.0
+    },
+    {
+      "id": 103,
+      "final_status": "needs_human",
+      "outcome": "Only 8 of 20 requested CC-HOOD-NAVY size M hoodies were in stock. Vendor, replenishment, timing, and discount approval facts were insufficient for a safe offer.",
+      "agents": ["Boss", "Inventory", "Accounting"],
+      "human_approvals": [],
+      "cash_change": 0.0
+    }
+  ]
+}
